@@ -1,0 +1,44 @@
+version: '3.9'
+
+services:
+  dspace:
+    image: dspace/dspace:dspace-6_x-jdk8
+    depends_on:
+      - database
+    networks:
+      dspace:
+    ports:
+      - published: 8080
+        target: 8080
+    stdin_open: true
+    tty: true
+    volumes:
+    - ./dspace/local.cfg:/dspace/config/local.cfg
+    - ./dspace/xmlui.xconf:/dspace/config/xmlui.xconf
+    - assetstore:/dspace/assetstore
+    - solr_authority:/dspace/solr/authority/data
+    - solr_oai:/dspace/solr/oai/data
+    - solr_search:/dspace/solr/search/data
+    - solr_statistics:/dspace/solr/statistics/data
+
+  database:
+    environment:
+      PGDATA: /pgdata
+    image: dspace/dspace-postgres-pgcrypto
+    networks:
+      dspace:
+    stdin_open: true
+    tty: true
+    volumes:
+    - pgdata:/pgdata
+
+networks:
+  dspace:
+
+volumes:
+  assetstore:
+  pgdata:
+  solr_authority:
+  solr_oai:
+  solr_search:
+  solr_statistics:
