@@ -12,9 +12,6 @@ services:
   dspace-cli:
     image: "dspace/dspace-cli:${DSPACE_VER:-dspace-6_x}"
     container_name: dspace-cli
-    build:
-      context: .
-      dockerfile: Dockerfile.cli.jdk8
     #environment:
     volumes:
     - ./dspace/local.cfg:/dspace/config/local.cfg
