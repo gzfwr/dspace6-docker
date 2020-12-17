@@ -1,6 +1,10 @@
 # Dieses Script führt auf einem frisch installierten Debian 10.7 alle Installationsschritte durch, um die aktuellen Docker-Container für DSpace6 (dspace und dspacedb) aus dem GzFWR-GitHub-Repository zu holen und zu starten. Vorerst zum Erstellen einer DSpace-Testinstanz.
 # Script als Root-User ausführen!
+
 # Autoren: Jannis, Stefan, Clemens
+# Erstellt: 17.12.2020
+# Letztes Update: 17.12.2020
+
 # Doku: https://github.com/DSpace/DSpace/tree/dspace-6_x/dspace/src/main/docker-compose
 
 #!/bin/sh
