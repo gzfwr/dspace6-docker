@@ -6,12 +6,12 @@
 
 Auf einem frisch installierten Debian 10 wird Git installiert und das GzFWR-Repo gecloned.
 
-`sudo apt-get install git -y`
+`sudo apt-get install git -y` <br>
 `git clone https://github.com/gzfwr/dspace6-docker`
 
 Anschließend wird das Skript *install-testsetup-from-scratch.sh* ausführbar gemacht und ausgeführt.
 
-`cd dspace6-docker`
+`cd dspace6-docker` <br>
 `chmod +x ./install-testsetup-from-scratch.sh`
 `sh ./install-testsetup-from-scratch.sh`
 
