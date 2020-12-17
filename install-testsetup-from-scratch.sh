@@ -32,8 +32,10 @@ docker-compose up -d
 echo "5 Minuten warten, bis Container gestartet wurden"
 sleep 5m # Warten bis Container gestartet
 # Administrator-Konto mit Beispiel-Daten anlegen
-docker-compose -p d6 -f docker-compose-cli.yml run dspace-cli create-administrator -e test@test.edu -f admin -l user -p admin -c en
+docker-compose -f docker-compose-cli.yml run dspace-cli create-administrator -e test@test.edu -f admin -l user -p admin -c en
+echo "1 Minute warten, bis Container gestartet wurden"
+sleep 1m # Warten bis Container gestartet
 # Testdaten in Respoitory laden
-docker-compose -p d6 -f docker-compose-cli.yml -f dspace/cli.ingest.yml run dspace-cli
+docker-compose -f docker-compose-cli.yml -f dspace/cli.ingest.yml run dspace-cli
 
 echo "Skript vollständig durchlaufen."
