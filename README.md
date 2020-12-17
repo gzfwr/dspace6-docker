@@ -12,7 +12,7 @@ Auf einem frisch installierten Debian 10 wird Git installiert und das GzFWR-Repo
 Anschließend wird das Skript *install-testsetup-from-scratch.sh* ausführbar gemacht und ausgeführt.
 
 `cd dspace6-docker` <br>
-`chmod +x ./install-testsetup-from-scratch.sh`
+`chmod +x ./install-testsetup-from-scratch.sh` <br>
 `sh ./install-testsetup-from-scratch.sh`
 
 
