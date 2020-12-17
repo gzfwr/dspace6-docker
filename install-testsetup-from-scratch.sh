@@ -16,7 +16,7 @@ apt-get upgrade -y
 
 # Benötigte Pakete installieren
 apt-get install curl -y
-apt-get install git -y
+apt-get install git -y # sollte aber eigentlich schon vorher installiert sein
 
 # Docker-Install
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -27,7 +27,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # Container starten
-cd dspace6-docker
+cd dspace6-docker # Ordner des heruntergeladenen GzFWR-Git-Repositories
 docker-compose up -d
 echo "5 Minuten warten, bis Container gestartet wurden"
 sleep 5m # Warten bis Container gestartet
