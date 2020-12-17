@@ -29,13 +29,18 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Container starten
 cd dspace6-docker # Ordner des heruntergeladenen GzFWR-Git-Repositories
 docker-compose up -d
+date
 echo "5 Minuten warten, bis Container gestartet wurden"
 sleep 5m # Warten bis Container gestartet
+
 # Administrator-Konto mit Beispiel-Daten anlegen
 docker-compose -f docker-compose-cli.yml run dspace-cli create-administrator -e test@test.edu -f admin -l user -p admin -c en
 echo "1 Minute warten, bis Container gestartet wurden"
+date
 sleep 1m # Warten bis Container gestartet
+
 # Testdaten in Respoitory laden
 docker-compose -f docker-compose-cli.yml -f dspace/cli.ingest.yml run dspace-cli
 
-echo "Skript vollständig durchlaufen."
+echo "$(tput setaf 2)Skript vollständig durchlaufen.$(tput sgr 0)"
+echo "Frontend sollte jetzt im Browser unter http://localhost:8080/xmlui aufrufbar sein"
