@@ -1,3 +1,4 @@
+#!/bin/sh
 # Dieses Script führt auf einem frisch installierten Debian 10.7 alle Installationsschritte durch, um die aktuellen Docker-Container für DSpace6 (dspace und dspacedb) aus dem GzFWR-GitHub-Repository zu holen und zu starten. Vorerst zum Erstellen einer DSpace-Testinstanz.
 # Script als Root-User ausführen!
 
@@ -7,7 +8,10 @@
 
 # Doku: https://github.com/DSpace/DSpace/tree/dspace-6_x/dspace/src/main/docker-compose
 
-#!/bin/sh
+# e: Exits script when any of the following commands fails
+# x: Print each command that is going to be executed
+set -ex
+
 # Prüfen, ob Script als root ausgeführt wird
 if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root"

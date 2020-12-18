@@ -6,14 +6,18 @@
 
 Auf einem frisch installierten Debian 10 wird Git installiert und das GzFWR-Repo gecloned.
 
-`sudo apt-get install git -y` <br>
-`git clone https://github.com/gzfwr/dspace6-docker`
+```bash
+sudo apt-get install git -y
+git clone https://github.com/gzfwr/dspace6-docker
+```
 
 Anschließend wird das Skript *install-testsetup-from-scratch.sh* ausführbar gemacht und ausgeführt.
 
-`cd dspace6-docker` <br>
-`chmod +x ./install-testsetup-from-scratch.sh` <br>
-`sh ./install-testsetup-from-scratch.sh`
+```bash
+cd dspace6-docker
+chmod +x ./install-testsetup-from-scratch.sh
+sh ./install-testsetup-from-scratch.sh
+```
 
 
 Nach erfolgreichem Durchlaufen des Skripts sollte das DSpace-Frontend unter *http://localhost:8080/xmlui* aufrufbar sein.
